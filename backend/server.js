@@ -21,6 +21,12 @@ app.use('/api/products', productRoutes);
 const cartRoutes = require('./routes/cartRoutes');
 app.use('/api/cart', cartRoutes);
 
+const adminRoutes = require('./routes/adminRoutes');
+app.use('/api/admin', adminRoutes);
+
+const deliveryRoutes = require('./routes/deliveryRoutes');
+app.use('/api/delivery', deliveryRoutes);
+
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
